@@ -25,12 +25,6 @@ router.get('/cards/num', auth, async (req, res) => {
 
 router.patch('/cards', auth, async (req, res) => {
 
-    // const { error } = validateCards(req.body);
-    // if (error) res.status(400).send(error.details[0].message);
-
-    // const cards = await getCards(req.body.cards);
-    // if (cards.length != req.body.cards.length) res.status(400).send("Card numbers don't match");
-
     let user = await User.findById(req.user._id);
     user.cards.push(req.body.cardNumber);
     user = await user.save();
