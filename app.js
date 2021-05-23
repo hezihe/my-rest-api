@@ -20,7 +20,7 @@ mongoose
 const whitelist = [
   "http://localhost:3000",
   "http://localhost:8181",
-  "https://shrouded-journey-38552.herokuapp.com",
+  "https://business-card-react-nodejs-app.herokuapp.com",
 ];
 const corsOptions = {
   origin: function (origin, callback) {
