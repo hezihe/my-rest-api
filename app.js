@@ -51,5 +51,7 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
-const port = process.env.PORT || 8181;
+console.log(path.join(__dirname, "../real-app/build", "index.html"));
+
+const port = process.env.PORT;
 http.listen(port, () => console.log(`Listening on port ${port}...`));
